@@ -1,0 +1,1440 @@
+fileFormatVersion: 2
+guid: 1c6055562ec5a804e96712f8ba5270c6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3160546326065076791
+    second: startingFurniture_Left_0
+  - first:
+      213: -4914388126769127089
+    second: startingFurniture_Left_1
+  - first:
+      213: -2013618173837147917
+    second: startingFurniture_Left_2
+  - first:
+      213: 8319545218836239954
+    second: startingFurniture_Left_3
+  - first:
+      213: 2995292555649815973
+    second: startingFurniture_Left_4
+  - first:
+      213: 1829338541080701297
+    second: startingFurniture_Left_5
+  - first:
+      213: -2163105974422343454
+    second: startingFurniture_Left_6
+  - first:
+      213: 6843230027430474213
+    second: startingFurniture_Left_7
+  - first:
+      213: -4993160069335266705
+    second: startingFurniture_Left_8
+  - first:
+      213: -5650327584102620224
+    second: startingFurniture_Left_9
+  - first:
+      213: 2823084385378131982
+    second: startingFurniture_Left_10
+  - first:
+      213: -6994943783227993964
+    second: startingFurniture_Left_11
+  - first:
+      213: 4318528243207787282
+    second: startingFurniture_Left_12
+  - first:
+      213: 4059471920696054576
+    second: startingFurniture_Left_13
+  - first:
+      213: -1704839944507865991
+    second: startingFurniture_Left_14
+  - first:
+      213: -5694457168997720381
+    second: startingFurniture_Left_15
+  - first:
+      213: 8210496194889117027
+    second: startingFurniture_Left_16
+  - first:
+      213: -4597274911547747700
+    second: startingFurniture_Left_17
+  - first:
+      213: 7093046882387286704
+    second: startingFurniture_Left_18
+  - first:
+      213: -596345003358151397
+    second: startingFurniture_Left_19
+  - first:
+      213: -8958207039529490468
+    second: startingFurniture_Left_20
+  - first:
+      213: -4347628943807613571
+    second: startingFurniture_Left_21
+  - first:
+      213: -5601277751952569158
+    second: startingFurniture_Left_22
+  - first:
+      213: 4812173299079961749
+    second: startingFurniture_Left_23
+  - first:
+      213: 7267383348771041154
+    second: startingFurniture_Left_24
+  - first:
+      213: -2806329786084086238
+    second: startingFurniture_Left_25
+  - first:
+      213: 6899764013545919299
+    second: startingFurniture_Left_26
+  - first:
+      213: 1523046616236659231
+    second: startingFurniture_Left_27
+  - first:
+      213: -6966457934311672840
+    second: startingFurniture_Left_28
+  - first:
+      213: 1502715733873155065
+    second: startingFurniture_Left_29
+  - first:
+      213: 4580259570060615408
+    second: startingFurniture_Left_30
+  - first:
+      213: -6533977388643820055
+    second: startingFurniture_Left_31
+  - first:
+      213: 2855328914222859746
+    second: startingFurniture_Left_32
+  - first:
+      213: 1840536146541380654
+    second: startingFurniture_Left_33
+  - first:
+      213: 8529319774180107833
+    second: startingFurniture_Left_34
+  - first:
+      213: 8058790476782812289
+    second: startingFurniture_Left_35
+  - first:
+      213: -1753847382203330947
+    second: startingFurniture_Left_36
+  - first:
+      213: 4518774266639140868
+    second: startingFurniture_Left_37
+  - first:
+      213: -4834193302549994198
+    second: startingFurniture_Left_38
+  - first:
+      213: 8225351197461193260
+    second: startingFurniture_Left_39
+  - first:
+      213: 4423569740620931670
+    second: startingFurniture_Left_40
+  - first:
+      213: -8774809059100082030
+    second: startingFurniture_Left_41
+  - first:
+      213: -6733876779364546551
+    second: startingFurniture_Left_42
+  - first:
+      213: -7206631618651479223
+    second: startingFurniture_Left_43
+  - first:
+      213: 241886636492166109
+    second: startingFurniture_Left_44
+  - first:
+      213: -3182705990468212544
+    second: startingFurniture_Left_45
+  - first:
+      213: 5258558349370504460
+    second: startingFurniture_Left_46
+  - first:
+      213: -8430796013866152794
+    second: startingFurniture_Left_47
+  - first:
+      213: 5685733874091302411
+    second: startingFurniture_Left_48
+  - first:
+      213: 4130450092578102010
+    second: startingFurniture_Left_49
+  - first:
+      213: 7781517140888700851
+    second: startingFurniture_Left_50
+  - first:
+      213: 7687329692262512984
+    second: startingFurniture_Left_51
+  - first:
+      213: -8928883233147095939
+    second: startingFurniture_Left_52
+  - first:
+      213: -5110559316595157997
+    second: startingFurniture_Left_53
+  - first:
+      213: -1475510235910004471
+    second: startingFurniture_Left_54
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: startingFurniture_Left_0
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 1677
+        width: 500
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c5a9ba9cdb7324d0800000000000000
+      internalID: -3160546326065076791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_1
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 1768
+        width: 14
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f41678749069ccbb0800000000000000
+      internalID: -4914388126769127089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_2
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 1686
+        width: 438
+        height: 537
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f08a2380f03e04e0800000000000000
+      internalID: -2013618173837147917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_3
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 1677
+        width: 518
+        height: 535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25698853c46f47370800000000000000
+      internalID: 8319545218836239954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_4
+      rect:
+        serializedVersion: 2
+        x: 2667
+        y: 1606
+        width: 497
+        height: 539
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a511e9a5ba619920800000000000000
+      internalID: 2995292555649815973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_5
+      rect:
+        serializedVersion: 2
+        x: 3676
+        y: 1886
+        width: 238
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 179eb0bf5bd136910800000000000000
+      internalID: 1829338541080701297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_6
+      rect:
+        serializedVersion: 2
+        x: 3999
+        y: 1886
+        width: 214
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e0f70fa39a1bf1e0800000000000000
+      internalID: -2163105974422343454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_7
+      rect:
+        serializedVersion: 2
+        x: 4985
+        y: 1707
+        width: 178
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e1b745f37908fe50800000000000000
+      internalID: 6843230027430474213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_8
+      rect:
+        serializedVersion: 2
+        x: 5247
+        y: 1707
+        width: 176
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a4b903f5bb4bab0800000000000000
+      internalID: -4993160069335266705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_9
+      rect:
+        serializedVersion: 2
+        x: 5457
+        y: 1707
+        width: 177
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c3e8fcbff00691b0800000000000000
+      internalID: -5650327584102620224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_10
+      rect:
+        serializedVersion: 2
+        x: 5707
+        y: 1707
+        width: 178
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e006a698a4c9d2720800000000000000
+      internalID: 2823084385378131982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_11
+      rect:
+        serializedVersion: 2
+        x: 3819
+        y: 1718
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4905ed0a0b7fcee90800000000000000
+      internalID: -6994943783227993964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_12
+      rect:
+        serializedVersion: 2
+        x: 4466
+        y: 1447
+        width: 237
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21354e08e8e7eeb30800000000000000
+      internalID: 4318528243207787282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_13
+      rect:
+        serializedVersion: 2
+        x: 4668
+        y: 1709
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 033d2c03434265830800000000000000
+      internalID: 4059471920696054576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_14
+      rect:
+        serializedVersion: 2
+        x: 3565
+        y: 1427
+        width: 188
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97446b46a113758e0800000000000000
+      internalID: -1704839944507865991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_15
+      rect:
+        serializedVersion: 2
+        x: 3778
+        y: 1659
+        width: 15
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ced635106939f0b0800000000000000
+      internalID: -5694457168997720381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_16
+      rect:
+        serializedVersion: 2
+        x: 3828
+        y: 1436
+        width: 225
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36def06c9ca81f170800000000000000
+      internalID: 8210496194889117027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_17
+      rect:
+        serializedVersion: 2
+        x: 4155
+        y: 1445
+        width: 209
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c82916a43d23330c0800000000000000
+      internalID: -4597274911547747700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_18
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 1066
+        width: 428
+        height: 456
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bad2e71f809f6260800000000000000
+      internalID: 7093046882387286704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_19
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 1047
+        width: 358
+        height: 537
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1d1247016b59b7f0800000000000000
+      internalID: -596345003358151397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_20
+      rect:
+        serializedVersion: 2
+        x: 1976
+        y: 1057
+        width: 429
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd7e070092e0ea380800000000000000
+      internalID: -8958207039529490468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_21
+      rect:
+        serializedVersion: 2
+        x: 2735
+        y: 1016
+        width: 358
+        height: 537
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d75f325a28e1aa3c0800000000000000
+      internalID: -4347628943807613571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_22
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 1489
+        width: 4
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc819abf834442b0800000000000000
+      internalID: -5601277751952569158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_23
+      rect:
+        serializedVersion: 2
+        x: 5407
+        y: 1356
+        width: 176
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59cd7499e1648c240800000000000000
+      internalID: 4812173299079961749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_24
+      rect:
+        serializedVersion: 2
+        x: 5585
+        y: 1441
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28f2616c6aeead460800000000000000
+      internalID: 7267383348771041154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_25
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 1159
+        width: 15
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22e2cd99de9ed09d0800000000000000
+      internalID: -2806329786084086238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_26
+      rect:
+        serializedVersion: 2
+        x: 2418
+        y: 1148
+        width: 14
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3439d6550d2e0cf50800000000000000
+      internalID: 6899764013545919299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_27
+      rect:
+        serializedVersion: 2
+        x: 3516
+        y: 946
+        width: 709
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f129529f3d2f22510800000000000000
+      internalID: 1523046616236659231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_28
+      rect:
+        serializedVersion: 2
+        x: 4216
+        y: 946
+        width: 698
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f3b6aa2b6b225f90800000000000000
+      internalID: -6966457934311672840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_29
+      rect:
+        serializedVersion: 2
+        x: 5096
+        y: 1168
+        width: 217
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fb56eb8ff7bad410800000000000000
+      internalID: 1502715733873155065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_30
+      rect:
+        serializedVersion: 2
+        x: 5568
+        y: 1168
+        width: 143
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fedb8ccfc9509f30800000000000000
+      internalID: 4580259570060615408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_31
+      rect:
+        serializedVersion: 2
+        x: 5818
+        y: 1168
+        width: 143
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ed537bfe26a255a0800000000000000
+      internalID: -6533977388643820055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_32
+      rect:
+        serializedVersion: 2
+        x: 5327
+        y: 967
+        width: 367
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5c721f48a20a720800000000000000
+      internalID: 2855328914222859746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_33
+      rect:
+        serializedVersion: 2
+        x: 5369
+        y: 960
+        width: 12
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e248ddaafd5ea8910800000000000000
+      internalID: 1840536146541380654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_34
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 415
+        width: 763
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93668b3f42b3e5670800000000000000
+      internalID: 8529319774180107833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_35
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 298
+        width: 589
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18cb0f7cd3396df60800000000000000
+      internalID: 8058790476782812289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_36
+      rect:
+        serializedVersion: 2
+        x: 2557
+        y: 719
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e8581291519a7e0800000000000000
+      internalID: -1753847382203330947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_37
+      rect:
+        serializedVersion: 2
+        x: 2598
+        y: 749
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 408c3370149e5be30800000000000000
+      internalID: 4518774266639140868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_38
+      rect:
+        serializedVersion: 2
+        x: 2655
+        y: 298
+        width: 588
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a256fe1ddce79ecb0800000000000000
+      internalID: -4834193302549994198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_39
+      rect:
+        serializedVersion: 2
+        x: 3417
+        y: 451
+        width: 733
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2222859551562270800000000000000
+      internalID: 8225351197461193260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_40
+      rect:
+        serializedVersion: 2
+        x: 4207
+        y: 415
+        width: 742
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 652a0e4fd3da36d30800000000000000
+      internalID: 4423569740620931670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_41
+      rect:
+        serializedVersion: 2
+        x: 5167
+        y: 389
+        width: 697
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 290c574d6ad993680800000000000000
+      internalID: -8774809059100082030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_42
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 396
+        width: 737
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90889bc2fb67c82a0800000000000000
+      internalID: -6733876779364546551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_43
+      rect:
+        serializedVersion: 2
+        x: 3409
+        y: 579
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9432e27a9b6ecfb90800000000000000
+      internalID: -7206631618651479223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_44
+      rect:
+        serializedVersion: 2
+        x: 4199
+        y: 539
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd397044d9a5b5300800000000000000
+      internalID: 241886636492166109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_45
+      rect:
+        serializedVersion: 2
+        x: 3489
+        y: 429
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c862ada3c1c4d3d0800000000000000
+      internalID: -3182705990468212544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_46
+      rect:
+        serializedVersion: 2
+        x: 3481
+        y: 410
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c05b4ec25f62af840800000000000000
+      internalID: 5258558349370504460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_47
+      rect:
+        serializedVersion: 2
+        x: 4240
+        y: 401
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ac8ab391bbcffa80800000000000000
+      internalID: -8430796013866152794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_48
+      rect:
+        serializedVersion: 2
+        x: 4280
+        y: 401
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e1e9c85d8c7ee40800000000000000
+      internalID: 5685733874091302411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_49
+      rect:
+        serializedVersion: 2
+        x: 4279
+        y: 379
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afad892a97e425930800000000000000
+      internalID: 4130450092578102010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_50
+      rect:
+        serializedVersion: 2
+        x: 5247
+        y: 321
+        width: 263
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b7c8448c908dfb60800000000000000
+      internalID: 7781517140888700851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_51
+      rect:
+        serializedVersion: 2
+        x: 5520
+        y: 370
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 859be9a30a1eeaa60800000000000000
+      internalID: 7687329692262512984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_52
+      rect:
+        serializedVersion: 2
+        x: 4261
+        y: 361
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d747357b10c361480800000000000000
+      internalID: -8928883233147095939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_53
+      rect:
+        serializedVersion: 2
+        x: 5542
+        y: 347
+        width: 120
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31458c2e065a319b0800000000000000
+      internalID: -5110559316595157997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startingFurniture_Left_54
+      rect:
+        serializedVersion: 2
+        x: 5306
+        y: 307
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 901a12e024fe58be0800000000000000
+      internalID: -1475510235910004471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

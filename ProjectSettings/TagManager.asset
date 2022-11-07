@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Bathroom to living room
+  - Bedroom to living room
+  - Bathroom to bedroom
+  - Balcony to living room
+  - Living room to bedroom
+  - Living room to balcony
+  - Living room to bathroom
+  - Living room/bathroom spawn
+  - Living room/bedroom spawn
+  - Living room/balcony spawn
+  - Bedroom/bathroom spawn
+  - Bedroom/living room spawn
+  - Bathroom/bedroom spawn
+  - Bathroom/living room spawn
+  - Balcony/living room spawn
+  - Bedroom to bathroom
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Room
+    uniqueID: 3418821569
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
