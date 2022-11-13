@@ -20,6 +20,7 @@ TagManager:
   - Bathroom/living room spawn
   - Balcony/living room spawn
   - Bedroom to bathroom
+  - Dialogue
   layers:
   - Default
   - TransparentFX
@@ -59,4 +60,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: NPC
+    uniqueID: 291667475
     locked: 0
