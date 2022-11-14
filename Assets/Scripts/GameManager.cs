@@ -13,9 +13,13 @@ public class GameManager : MonoBehaviour
 
     public List<GameObject> doorColliders = new List<GameObject>();
 
+    public DialogueManager dialogueManager;
+    public Pancho pancho;
+
     // Start is called before the first frame update
     void Start()
     {
+        pancho.TriggerDialogue();
         
     }
 

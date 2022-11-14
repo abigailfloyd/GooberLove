@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     public Rigidbody2D rb;
     public float speed = 1;
+    public bool doneTouring = false;
 
     [SerializeField] GameManager GM;
     // Start is called before the first frame update
@@ -47,7 +48,20 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        GM.TurnOffDoors();
+        if (other.tag == "Front Door")
+        {
+            if (!doneTouring)
+            {
+                GM.pancho.dialogue.sentences.Clear();
+                GM.pancho.dialogue.sentences.Add("Running away already? You’ll hafta make a decision first.");
+                GM.pancho.TriggerDialogue();
+            }
+            else
+            {
+
+            }
+            
+        }
         if (other.tag == "Living room to bathroom")
         {
             GM.LivingRoomToBathroom();
@@ -87,7 +101,6 @@ public class PlayerMovement : MonoBehaviour
         {
             GM.BalconyToLivingRoom();
         }
-        GM.TurnOnDoors();
     }
 
 }

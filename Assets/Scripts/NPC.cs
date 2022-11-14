@@ -6,11 +6,14 @@ public class NPC : MonoBehaviour
 {
 
     private GameObject player;
-    [SerializeField] Dialogue dialogue;
+    public Dialogue dialogue;
+    public DialogueManager dialogueManager;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+        dialogueManager = GameObject.FindWithTag("Dialogue Manager").GetComponent<DialogueManager>();
     }
 
     // Update is called once per frame
@@ -24,5 +27,21 @@ public class NPC : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().sortingLayerName = "NPC";
         }
+
     }
+
+    public void TriggerDialogue()
+    {
+        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+    }
+    
+    
+
+   
+
+
+
+
+
+
 }

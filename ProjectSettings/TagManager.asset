@@ -21,6 +21,8 @@ TagManager:
   - Balcony/living room spawn
   - Bedroom to bathroom
   - Dialogue
+  - Front Door
+  - Dialogue Manager
   layers:
   - Default
   - TransparentFX

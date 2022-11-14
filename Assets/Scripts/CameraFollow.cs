@@ -17,7 +17,7 @@ public class CameraFollow : MonoBehaviour
 	}
 
 	// Update is called once per frame
-	void FixedUpdate()
+	void Update()
 	{
 		if (target)
 		{
@@ -32,7 +32,11 @@ public class CameraFollow : MonoBehaviour
 
 			//transform.position = Vector3.Lerp(transform.position, targetPos + offset, 0.25f);
 
-			transform.position = targetPos;
+			//Turn this on for slight spring cam
+			//transform.position = targetPos;
+
+			//Turn this on for no spring cam
+			transform.position = new Vector3(target.transform.position.x, target.transform.position.y, -10);
 
 		}
 	}
