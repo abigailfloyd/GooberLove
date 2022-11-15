@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 1;
     public bool doneTouring = false;
 
+
     [SerializeField] GameManager GM;
     // Start is called before the first frame update
     void Start()

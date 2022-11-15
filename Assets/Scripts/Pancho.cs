@@ -5,6 +5,22 @@ using UnityEngine.UI;
 
 public class Pancho : NPC
 {
+   
+    public GameObject contract;
+    public Animator animator;
+    public Rigidbody2D rb;
+    bool hasGivenMap = false;
+    bool givingMap = false;
+    public Sprite givingMapSprite;
+    public Sprite originalSprite;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        //rb.constraints = RigidbodyConstraints2D.FreezePosition;
+        //rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+    }
+
     public void QuestionOne()
     {
         dialogue.sentences.Clear();
@@ -19,7 +35,8 @@ public class Pancho : NPC
 
     public void Question1Option1()
     {
-        // give player contract to sign
+        dialogueManager.DisplayNextSentence();
+        contract.SetActive(true);
     }
 
     public void Question1Option2()
@@ -44,5 +61,56 @@ public class Pancho : NPC
     public void Question2Option2()
     {
         // transport to 3A
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Front Door")
+        {
+            if (hasGivenMap == false)
+            {
+                rb.velocity = new Vector2(0, 0);
+                animator.SetBool("WalkLeft", false);
+                StartCoroutine(WaitAndWalkRight());
+                givingMap = true;
+            }
+            else
+            {
+                dialogueManager.continueButton.GetComponent<Button>().onClick.RemoveAllListeners();
+                dialogueManager.continueButton.GetComponent<Button>().onClick.AddListener(delegate { dialogueManager.DisplayNextSentence(); });
+                //StartCoroutine(GameObject.FindWithTag("GM").GetComponent<GameManager>().FadeToBlack());
+                gameObject.SetActive(false);
+
+            }
+        }
+        if (other.tag == "Pancho Start" && givingMap == true)
+        {
+            if (hasGivenMap == false)
+            {
+                animator.SetBool("WalkRight", false);
+                rb.velocity = new Vector2(0, 0);
+                gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
+                rb.constraints = RigidbodyConstraints2D.FreezePosition;
+                rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+                dialogue.sentences.Clear();
+                dialogue.sentences.Add("Almost forgot! This is for you.");
+                TriggerDialogue();
+                gameObject.transform.position = new Vector3(gameObject.transform.position.x - .5f, gameObject.transform.position.y, gameObject.transform.position.z);
+                animator.enabled = false;
+                gameObject.GetComponent<SpriteRenderer>().sprite = givingMapSprite;
+                hasGivenMap = true;
+            }
+            
+            
+        }
+    }
+
+
+
+    IEnumerator WaitAndWalkRight()
+    {
+        yield return new WaitForSeconds(.75f);
+        rb.velocity = new Vector2(1, 0);
+        animator.SetBool("WalkRight", true);
     }
 }

@@ -23,6 +23,8 @@ TagManager:
   - Dialogue
   - Front Door
   - Dialogue Manager
+  - Pancho Start
+  - GM
   layers:
   - Default
   - TransparentFX

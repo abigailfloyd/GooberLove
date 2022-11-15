@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class GameManager : MonoBehaviour
     public GameObject bedroom;
     public GameObject bathroom;
     public GameObject balcony;
+    public GameObject worldCanvas;
+    public GameObject screenCanvas;
 
     public GameObject player;
 
@@ -15,6 +18,8 @@ public class GameManager : MonoBehaviour
 
     public DialogueManager dialogueManager;
     public Pancho pancho;
+
+    public Image blackSquare;
 
     // Start is called before the first frame update
     void Start()
@@ -112,5 +117,22 @@ public class GameManager : MonoBehaviour
         {
             door.SetActive(true);
         }
+    }
+
+    public IEnumerator FadeToBlack()
+    {
+        worldCanvas.SetActive(false);
+        screenCanvas.SetActive(true);
+        Color c =  blackSquare.color;
+        while (c.a < 1f)
+        {
+            c.a+=.01f;
+            blackSquare.color = c;
+            Debug.Log(c.a);
+            yield return new WaitForSeconds(.1f);
+        }
+        yield return null;
+        
+        
     }
 }

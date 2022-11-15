@@ -5,7 +5,7 @@ using UnityEngine;
 public class NPC : MonoBehaviour
 {
 
-    private GameObject player;
+    public GameObject player;
     public Dialogue dialogue;
     public DialogueManager dialogueManager;
 

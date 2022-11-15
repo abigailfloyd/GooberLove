@@ -74,7 +74,7 @@ public class DialogueManager : MonoBehaviour
         doneTyping = true;
     }
 
-    void EndDialogue()
+    public void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
     }
