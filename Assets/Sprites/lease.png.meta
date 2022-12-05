@@ -1,37 +1,22 @@
 fileFormatVersion: 2
-guid: 2215c534e2be4074fa12b791a419293e
+guid: deea6443a7f62094a8e934b932cfca9d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7098659167771800208
-    second: 3A_Rooms_0
+      213: -1258175344026001640
+    second: lease_0
   - first:
-      213: 4219569231641672935
-    second: 3A_Rooms_1
+      213: -4349514359189620701
+    second: lease_1
   - first:
-      213: 6549240014650728589
-    second: 3A_Rooms_2
+      213: 2627783644634343897
+    second: lease_2
   - first:
-      213: -4371770372898141686
-    second: 3A_Rooms_3
+      213: 4100593712681788792
+    second: lease_3
   - first:
-      213: -5553514580896652198
-    second: 3A_Rooms_4
-  - first:
-      213: 338190091742123048
-    second: 3A_Rooms_5
-  - first:
-      213: -6756169052583941320
-    second: 3A_Rooms_6
-  - first:
-      213: 6508092068101350439
-    second: 3A_Rooms_7
-  - first:
-      213: 4183844371124862919
-    second: 3A_Rooms_8
-  - first:
-      213: -6667377632118752476
-    second: 3A_Rooms_9
+      213: 8998390636607341861
+    second: lease_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -133,13 +118,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 3A_Rooms_0
+      name: lease_0
       rect:
         serializedVersion: 2
-        x: 30
-        y: 855
-        width: 824
-        height: 382
+        x: 170
+        y: 174
+        width: 1314
+        height: 858
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 092bb9c17e0838260800000000000000
-      internalID: 7098659167771800208
+      spriteID: 81fdc22d0301a8ee0800000000000000
+      internalID: -1258175344026001640
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3A_Rooms_1
+      name: lease_1
       rect:
         serializedVersion: 2
-        x: 1221
-        y: 878
-        width: 564
-        height: 312
+        x: 1598
+        y: 467
+        width: 22
+        height: 350
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ec7b252cdbee8a30800000000000000
-      internalID: 4219569231641672935
+      spriteID: 328ba0b2cbb63a3c0800000000000000
+      internalID: -4349514359189620701
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3A_Rooms_2
+      name: lease_2
       rect:
         serializedVersion: 2
-        x: 35
-        y: 37
-        width: 480
-        height: 395
+        x: 1734
+        y: 467
+        width: 1054
+        height: 507
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d80e70e081393ea50800000000000000
-      internalID: 6549240014650728589
+      spriteID: 9d9e20d5d43c77420800000000000000
+      internalID: 2627783644634343897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3A_Rooms_3
+      name: lease_3
       rect:
         serializedVersion: 2
-        x: 548
-        y: 23
-        width: 1362
-        height: 682
+        x: 163
+        y: 217
+        width: 5
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0a44db220a5453c0800000000000000
-      internalID: -4371770372898141686
+      spriteID: 875299c714c38e830800000000000000
+      internalID: 4100593712681788792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3A_Rooms_4
+      name: lease_4
       rect:
         serializedVersion: 2
-        x: 248
-        y: 20
-        width: 21
-        height: 4
+        x: 1734
+        y: 215
+        width: 494
+        height: 106
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,8 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a54e3b699e3fde2b0800000000000000
-      internalID: -5553514580896652198
+      spriteID: 5258e25cb94b0ec70800000000000000
+      internalID: 8998390636607341861
       vertices: []
       indices: 
       edges: []

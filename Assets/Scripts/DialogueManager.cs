@@ -19,7 +19,7 @@ public class DialogueManager : MonoBehaviour
 
     public Animator animator;
 
-    private Queue<string> sentences = new Queue<string>();
+    public Queue<string> sentences = new Queue<string>();
 
     private bool doneTyping = false;
 

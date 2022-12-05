@@ -13,12 +13,17 @@ public class Pancho : NPC
     bool givingMap = false;
     public Sprite givingMapSprite;
     public Sprite originalSprite;
+    public PlayerMovement playerMovement;
+    public GameManager GM;
+    public GameObject mapAddedText;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //rb.constraints = RigidbodyConstraints2D.FreezePosition;
-        //rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        playerMovement =  GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
+        GM = GameObject.FindWithTag("GM").GetComponent<GameManager>();
+
+
     }
 
     public void QuestionOne()
@@ -27,19 +32,32 @@ public class Pancho : NPC
         dialogue.sentences.Add("So, would you like to take it?");
         TriggerDialogue();
         dialogueManager.StartShowOptionsCoroutine("Yes!", "No, show me other options");
+        dialogueManager.ResizeOptionText(600, 400);
         dialogueManager.option1.GetComponent<Button>().onClick.RemoveAllListeners();
         dialogueManager.option2.GetComponent<Button>().onClick.RemoveAllListeners();
-        dialogueManager.option1.GetComponent<Button>().onClick.AddListener(delegate { Question1Option1(); });
-        dialogueManager.option2.GetComponent<Button>().onClick.AddListener(delegate { Question1Option2(); });
+        dialogueManager.option1.GetComponent<Button>().onClick.AddListener(delegate { SignContract(); });
+        if (GM.currentApt == "3C")
+        {
+            dialogueManager.option2.GetComponent<Button>().onClick.AddListener(delegate { MoveFrom3C(); });
+        }
+        else if (GM.currentApt == "3A")
+        {
+            dialogueManager.option2.GetComponent<Button>().onClick.AddListener(delegate { MoveFrom3A(); });
+        }
+        else
+        {
+            dialogueManager.option2.GetComponent<Button>().onClick.AddListener(delegate { MoveFrom2B(); });
+        }
+
     }
 
-    public void Question1Option1()
+    public void SignContract()
     {
         dialogueManager.DisplayNextSentence();
         contract.SetActive(true);
     }
 
-    public void Question1Option2()
+    public void MoveFrom3C()
     {
         dialogueManager.HideAllButtons();
         dialogue.sentences.Clear();
@@ -49,18 +67,71 @@ public class Pancho : NPC
         dialogueManager.ResizeOptionText(600, 600);
         dialogueManager.option1.GetComponent<Button>().onClick.RemoveAllListeners();
         dialogueManager.option2.GetComponent<Button>().onClick.RemoveAllListeners();
-        dialogueManager.option1.GetComponent<Button>().onClick.AddListener(delegate { Question2Option1(); });
-        dialogueManager.option2.GetComponent<Button>().onClick.AddListener(delegate { Question2Option2(); });
+        dialogueManager.option1.GetComponent<Button>().onClick.AddListener(delegate { GoTo2B(); });
+        dialogueManager.option2.GetComponent<Button>().onClick.AddListener(delegate { GoTo3A(); });
     }
 
-    public void Question2Option1()
+    public void MoveFrom3A()
     {
-        // transport to 2B
+        dialogueManager.HideAllButtons();
+        dialogue.sentences.Clear();
+        dialogue.sentences.Add("Okay. Would you like to visit 3A or 3C?");
+        TriggerDialogue();
+        dialogueManager.StartShowOptionsCoroutine("3A", "3C");
+        dialogueManager.ResizeOptionText(600, 600);
+        dialogueManager.option1.GetComponent<Button>().onClick.RemoveAllListeners();
+        dialogueManager.option2.GetComponent<Button>().onClick.RemoveAllListeners();
+        dialogueManager.option1.GetComponent<Button>().onClick.AddListener(delegate { GoTo3A(); });
+        dialogueManager.option2.GetComponent<Button>().onClick.AddListener(delegate { GoTo3C(); });
     }
 
-    public void Question2Option2()
+    public void MoveFrom2B()
     {
-        // transport to 3A
+        dialogueManager.HideAllButtons();
+        dialogue.sentences.Clear();
+        dialogue.sentences.Add("Okay. Would you like to visit 3A or 3C?");
+        TriggerDialogue();
+        dialogueManager.StartShowOptionsCoroutine("3A", "3C");
+        dialogueManager.ResizeOptionText(600, 600);
+        dialogueManager.option1.GetComponent<Button>().onClick.RemoveAllListeners();
+        dialogueManager.option2.GetComponent<Button>().onClick.RemoveAllListeners();
+        dialogueManager.option1.GetComponent<Button>().onClick.AddListener(delegate { GoTo3A(); });
+        dialogueManager.option2.GetComponent<Button>().onClick.AddListener(delegate { GoTo3C(); });
+    }
+
+    public void GoTo2B()
+    {
+        dialogueManager.DisplayNextSentence();
+        dialogueManager.HideAllButtons();
+        playerMovement.GoTo2B();
+        dialogue.sentences.Clear();
+        dialogue.sentences.Add("Welcome to 2B.");
+        TriggerDialogue();
+        dialogueManager.continueButton.SetActive(true);
+    }
+
+    public void GoTo3A()
+    {
+        dialogueManager.DisplayNextSentence();
+        dialogueManager.HideAllButtons();
+        playerMovement.GoTo3A();
+        dialogue.sentences.Clear();
+        dialogue.sentences.Add("Welcome to 3A.");
+        TriggerDialogue();
+        dialogueManager.continueButton.SetActive(true);
+
+    }
+
+    public void GoTo3C()
+    {
+        dialogueManager.DisplayNextSentence();
+        dialogueManager.HideAllButtons();
+        playerMovement.GoTo3C();
+        dialogue.sentences.Clear();
+        dialogue.sentences.Add("Welcome to 3C.");
+        TriggerDialogue();
+        dialogueManager.continueButton.SetActive(true);
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -70,8 +141,21 @@ public class Pancho : NPC
             if (hasGivenMap == false)
             {
                 rb.velocity = new Vector2(0, 0);
-                animator.SetBool("WalkLeft", false);
-                StartCoroutine(WaitAndWalkRight());
+                if (GM.currentApt == "3C")
+                {
+                    animator.SetBool("WalkLeft", false);
+                    StartCoroutine(WaitAndWalkRight());
+                }
+                else if (GM.currentApt == "3A")
+                {
+                    animator.SetBool("WalkDown", false);
+                    StartCoroutine(WaitAndWalkUp());
+                }
+                else
+                {
+                    animator.SetBool("WalkRight", false);
+                    StartCoroutine(WaitAndWalkLeft());
+                }
                 givingMap = true;
             }
             else
@@ -87,7 +171,18 @@ public class Pancho : NPC
         {
             if (hasGivenMap == false)
             {
-                animator.SetBool("WalkRight", false);
+                if (GM.currentApt == "3C")
+                {
+                    animator.SetBool("WalkRight", false);
+                }
+                else if (GM.currentApt == "3A")
+                {
+                    animator.SetBool("WalkUp", false);
+                }
+                else
+                {
+                    animator.SetBool("WalkLeft", false);
+                }
                 rb.velocity = new Vector2(0, 0);
                 gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
                 rb.constraints = RigidbodyConstraints2D.FreezePosition;
@@ -95,22 +190,50 @@ public class Pancho : NPC
                 dialogue.sentences.Clear();
                 dialogue.sentences.Add("Almost forgot! This is for you.");
                 TriggerDialogue();
+                StartCoroutine(MapAddedText());
                 gameObject.transform.position = new Vector3(gameObject.transform.position.x - .5f, gameObject.transform.position.y, gameObject.transform.position.z);
                 animator.enabled = false;
                 gameObject.GetComponent<SpriteRenderer>().sprite = givingMapSprite;
+                if (GM.currentApt == "2B")
+                {
+                    gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x * -1, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+                }
                 hasGivenMap = true;
-            }
-            
-            
+            } 
         }
     }
 
+    IEnumerator MapAddedText()
+    {
+        yield return new WaitForSeconds(1.5f);
+        mapAddedText.SetActive(true);
+        StartCoroutine(HideMapText());
+    }
 
+    IEnumerator HideMapText()
+    {
+        yield return new WaitForSeconds(2);
+        mapAddedText.SetActive(false);
+    }
 
     IEnumerator WaitAndWalkRight()
     {
         yield return new WaitForSeconds(.75f);
         rb.velocity = new Vector2(1, 0);
         animator.SetBool("WalkRight", true);
+    }
+
+    IEnumerator WaitAndWalkUp()
+    {
+        yield return new WaitForSeconds(.75f);
+        rb.velocity = new Vector2(0, 1);
+        animator.SetBool("WalkUp", true);
+    }
+
+    IEnumerator WaitAndWalkLeft()
+    {
+        yield return new WaitForSeconds(.75f);
+        rb.velocity = new Vector2(-1, 0);
+        animator.SetBool("WalkLeft", true);
     }
 }

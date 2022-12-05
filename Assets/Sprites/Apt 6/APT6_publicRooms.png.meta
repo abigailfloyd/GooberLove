@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: e67fa64923ed11244820f9b5b6a30b83
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1747552529456583262
+    second: APT6_publicRooms_0
+  - first:
+      213: -6990953105014535039
+    second: APT6_publicRooms_1
+  - first:
+      213: 4071782510114740492
+    second: APT6_publicRooms_2
+  - first:
+      213: 4358555855938671723
+    second: APT6_publicRooms_3
+  - first:
+      213: -8034952463557947093
+    second: APT6_publicRooms_4
+  - first:
+      213: -8971500928361492112
+    second: APT6_publicRooms_5
+  - first:
+      213: -7096077525419404849
+    second: APT6_publicRooms_6
+  - first:
+      213: -844512779393647669
+    second: APT6_publicRooms_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +56,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -101,7 +125,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: APT6_publicRooms_0
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 646
+        width: 385
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ada76fbb327fb7e0800000000000000
+      internalID: -1747552529456583262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: APT6_publicRooms_1
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 663
+        width: 244
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18cc13ec0352bfe90800000000000000
+      internalID: -6990953105014535039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: APT6_publicRooms_2
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 606
+        width: 245
+        height: 449
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c099906ae90e18830800000000000000
+      internalID: 4071782510114740492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: APT6_publicRooms_3
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 480
+        width: 290
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b645ce65573bc7c30800000000000000
+      internalID: 4358555855938671723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: APT6_publicRooms_4
+      rect:
+        serializedVersion: 2
+        x: 1594
+        y: 749
+        width: 19
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b219a7e2e4d1e7090800000000000000
+      internalID: -8034952463557947093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: APT6_publicRooms_5
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 13
+        width: 984
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0711dee4073de7380800000000000000
+      internalID: -8971500928361492112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: APT6_publicRooms_6
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 554
+        width: 25
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc15eb6561ba58d90800000000000000
+      internalID: -7096077525419404849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: APT6_publicRooms_7
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 11
+        width: 480
+        height: 411
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcbb6fff910b744f0800000000000000
+      internalID: -844512779393647669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

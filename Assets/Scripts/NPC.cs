@@ -17,9 +17,9 @@ public class NPC : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        if (player.transform.position.y < (gameObject.transform.position.y-.4))
+        if (player.transform.position.y < (gameObject.transform.position.y-.3))
         {
             GetComponent<SpriteRenderer>().sortingLayerName = "Room";
         }

@@ -1,19 +1,7 @@
 fileFormatVersion: 2
-guid: 0dbd407e03398c148b7c8e16875628c6
+guid: 26bed7cde07b69b4894dbe558167e26b
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -2507178913320945285
-    second: 3C_Rooms_Split_0
-  - first:
-      213: -5864532258077494605
-    second: 3C_Rooms_Split_1
-  - first:
-      213: -8759666692285813891
-    second: 3C_Rooms_Split_2
-  - first:
-      213: 3441619754367490810
-    second: 3C_Rooms_Split_3
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -53,7 +41,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,91 +101,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: 3C_Rooms_Split_0
-      rect:
-        serializedVersion: 2
-        x: 45
-        y: 856
-        width: 824
-        height: 378
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b79b72bdf06b43dd0800000000000000
-      internalID: -2507178913320945285
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 3C_Rooms_Split_1
-      rect:
-        serializedVersion: 2
-        x: 1379
-        y: 854
-        width: 483
-        height: 395
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b2b87f9bfefc9ea0800000000000000
-      internalID: -5864532258077494605
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 3C_Rooms_Split_2
-      rect:
-        serializedVersion: 2
-        x: 83
-        y: 69
-        width: 563
-        height: 301
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7bab77dd896f6680800000000000000
-      internalID: -8759666692285813891
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 3C_Rooms_Split_3
-      rect:
-        serializedVersion: 2
-        x: 924
-        y: 71
-        width: 996
-        height: 591
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: afa9a0f9ee613cf20800000000000000
-      internalID: 3441619754367490810
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []

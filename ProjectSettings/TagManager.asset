@@ -25,6 +25,47 @@ TagManager:
   - Dialogue Manager
   - Pancho Start
   - GM
+  - Hallway to elevator
+  - Hallway/3C spawn
+  - Elevator to hallway
+  - Elevator door
+  - Elevator/hallway spawn
+  - Elevator door spawn
+  - Hallway/elevator spawn
+  - Hallway/stairs spawn
+  - Stairs/third floor spawn
+  - Stairs/second floor spawn
+  - Stairs/first floor spawn
+  - Stairs to third floor
+  - Stairs to second floor
+  - Stairs to first floor
+  - Hallway/hallway
+  - Elevator/elevator
+  - Stairs/stairs
+  - DoorTo3C
+  - DoorTo3A
+  - Living room/hallway spawn
+  - DoorTo2B
+  - Hallway/2B spawn
+  - Hallway/3A spawn
+  - Hallway1 to stairs
+  - Hallway2 to stairs
+  - Oxman
+  - Oxman start
+  - Turn up
+  - Turn left
+  - Turn right
+  - Turn down
+  - Oxman Start lower
+  - Player start
+  - End of walkway
+  - Turn down right
+  - Post office
+  - Post office bathroom
+  - Post office bathroom spawn
+  - Post office main room
+  - Post office main room bathroom spawn
+  - Rug
   layers:
   - Default
   - TransparentFX
