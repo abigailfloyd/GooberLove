@@ -15,26 +15,25 @@ public class Pancho : NPC
     public Sprite originalSprite;
     public PlayerMovement playerMovement;
     public GameManager GM;
-    public GameObject mapAddedText;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         playerMovement =  GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
         GM = GameObject.FindWithTag("GM").GetComponent<GameManager>();
-
-
     }
 
     public void QuestionOne()
     {
+        dialogueManager.ChangeBox();
         dialogue.sentences.Clear();
         dialogue.sentences.Add("So, would you like to take it?");
         TriggerDialogue();
         dialogueManager.StartShowOptionsCoroutine("Yes!", "No, show me other options");
-        dialogueManager.ResizeOptionText(600, 400);
         dialogueManager.option1.GetComponent<Button>().onClick.RemoveAllListeners();
         dialogueManager.option2.GetComponent<Button>().onClick.RemoveAllListeners();
+        dialogueManager.option1.GetComponent<Button>().onClick.AddListener(delegate { dialogueManager.HideTriangles(); });
+        dialogueManager.option2.GetComponent<Button>().onClick.AddListener(delegate { dialogueManager.HideTriangles(); });
         dialogueManager.option1.GetComponent<Button>().onClick.AddListener(delegate { SignContract(); });
         if (GM.currentApt == "3C")
         {
@@ -59,6 +58,7 @@ public class Pancho : NPC
 
     public void MoveFrom3C()
     {
+        dialogueManager.ChangeBox();
         dialogueManager.HideAllButtons();
         dialogue.sentences.Clear();
         dialogue.sentences.Add("Okay. Would you like to visit 2B or 3A?");
@@ -67,26 +67,32 @@ public class Pancho : NPC
         dialogueManager.ResizeOptionText(600, 600);
         dialogueManager.option1.GetComponent<Button>().onClick.RemoveAllListeners();
         dialogueManager.option2.GetComponent<Button>().onClick.RemoveAllListeners();
+        dialogueManager.option1.GetComponent<Button>().onClick.AddListener(delegate { dialogueManager.HideTriangles(); });
+        dialogueManager.option2.GetComponent<Button>().onClick.AddListener(delegate { dialogueManager.HideTriangles(); });
         dialogueManager.option1.GetComponent<Button>().onClick.AddListener(delegate { GoTo2B(); });
         dialogueManager.option2.GetComponent<Button>().onClick.AddListener(delegate { GoTo3A(); });
     }
 
     public void MoveFrom3A()
     {
+        dialogueManager.ChangeBox();
         dialogueManager.HideAllButtons();
         dialogue.sentences.Clear();
-        dialogue.sentences.Add("Okay. Would you like to visit 3A or 3C?");
+        dialogue.sentences.Add("Okay. Would you like to visit 2B or 3C?");
         TriggerDialogue();
-        dialogueManager.StartShowOptionsCoroutine("3A", "3C");
+        dialogueManager.StartShowOptionsCoroutine("2B", "3C");
         dialogueManager.ResizeOptionText(600, 600);
         dialogueManager.option1.GetComponent<Button>().onClick.RemoveAllListeners();
         dialogueManager.option2.GetComponent<Button>().onClick.RemoveAllListeners();
-        dialogueManager.option1.GetComponent<Button>().onClick.AddListener(delegate { GoTo3A(); });
+        dialogueManager.option1.GetComponent<Button>().onClick.AddListener(delegate { dialogueManager.HideTriangles(); });
+        dialogueManager.option2.GetComponent<Button>().onClick.AddListener(delegate { dialogueManager.HideTriangles(); });
+        dialogueManager.option1.GetComponent<Button>().onClick.AddListener(delegate { GoTo2B(); });
         dialogueManager.option2.GetComponent<Button>().onClick.AddListener(delegate { GoTo3C(); });
     }
 
     public void MoveFrom2B()
     {
+        dialogueManager.ChangeBox();
         dialogueManager.HideAllButtons();
         dialogue.sentences.Clear();
         dialogue.sentences.Add("Okay. Would you like to visit 3A or 3C?");
@@ -95,15 +101,26 @@ public class Pancho : NPC
         dialogueManager.ResizeOptionText(600, 600);
         dialogueManager.option1.GetComponent<Button>().onClick.RemoveAllListeners();
         dialogueManager.option2.GetComponent<Button>().onClick.RemoveAllListeners();
+        dialogueManager.option1.GetComponent<Button>().onClick.AddListener(delegate { dialogueManager.HideTriangles(); });
+        dialogueManager.option2.GetComponent<Button>().onClick.AddListener(delegate { dialogueManager.HideTriangles(); });
         dialogueManager.option1.GetComponent<Button>().onClick.AddListener(delegate { GoTo3A(); });
         dialogueManager.option2.GetComponent<Button>().onClick.AddListener(delegate { GoTo3C(); });
     }
 
     public void GoTo2B()
     {
+        dialogueManager.ChangeBoxBack();
         dialogueManager.DisplayNextSentence();
+        
         dialogueManager.HideAllButtons();
-        playerMovement.GoTo2B();
+        StartCoroutine(GM.FadeToBlack());
+        StartCoroutine(GoTo2BCoroutine());
+        StartCoroutine(playerMovement.GoTo2B());
+    }
+
+    IEnumerator GoTo2BCoroutine()
+    {
+        yield return new WaitForSeconds(1);
         dialogue.sentences.Clear();
         dialogue.sentences.Add("Welcome to 2B.");
         TriggerDialogue();
@@ -112,26 +129,40 @@ public class Pancho : NPC
 
     public void GoTo3A()
     {
+        dialogueManager.ChangeBoxBack();
         dialogueManager.DisplayNextSentence();
         dialogueManager.HideAllButtons();
-        playerMovement.GoTo3A();
+        StartCoroutine(GM.FadeToBlack());
+        StartCoroutine(GoTo3ACoroutine());
+        StartCoroutine(playerMovement.GoTo3A());
+    }
+
+    IEnumerator GoTo3ACoroutine()
+    {
+        yield return new WaitForSeconds(1);
         dialogue.sentences.Clear();
         dialogue.sentences.Add("Welcome to 3A.");
         TriggerDialogue();
         dialogueManager.continueButton.SetActive(true);
-
     }
 
     public void GoTo3C()
     {
+        dialogueManager.ChangeBoxBack();
         dialogueManager.DisplayNextSentence();
         dialogueManager.HideAllButtons();
-        playerMovement.GoTo3C();
+        StartCoroutine(GM.FadeToBlack());
+        StartCoroutine(GoTo3CCoroutine());
+        StartCoroutine(playerMovement.GoTo3C());
+    }
+
+    IEnumerator GoTo3CCoroutine()
+    {
+        yield return new WaitForSeconds(1);
         dialogue.sentences.Clear();
         dialogue.sentences.Add("Welcome to 3C.");
         TriggerDialogue();
         dialogueManager.continueButton.SetActive(true);
-
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -160,8 +191,7 @@ public class Pancho : NPC
             }
             else
             {
-                dialogueManager.continueButton.GetComponent<Button>().onClick.RemoveAllListeners();
-                dialogueManager.continueButton.GetComponent<Button>().onClick.AddListener(delegate { dialogueManager.DisplayNextSentence(); });
+               
                 //StartCoroutine(GameObject.FindWithTag("GM").GetComponent<GameManager>().FadeToBlack());
                 gameObject.SetActive(false);
 
@@ -171,6 +201,7 @@ public class Pancho : NPC
         {
             if (hasGivenMap == false)
             {
+                rb.constraints = RigidbodyConstraints2D.FreezeAll;
                 if (GM.currentApt == "3C")
                 {
                     animator.SetBool("WalkRight", false);
@@ -190,7 +221,8 @@ public class Pancho : NPC
                 dialogue.sentences.Clear();
                 dialogue.sentences.Add("Almost forgot! This is for you.");
                 TriggerDialogue();
-                StartCoroutine(MapAddedText());
+                rb.constraints = RigidbodyConstraints2D.FreezeAll;
+                StartCoroutine(GM.MapAddedText());
                 gameObject.transform.position = new Vector3(gameObject.transform.position.x - .5f, gameObject.transform.position.y, gameObject.transform.position.z);
                 animator.enabled = false;
                 gameObject.GetComponent<SpriteRenderer>().sprite = givingMapSprite;
@@ -203,18 +235,7 @@ public class Pancho : NPC
         }
     }
 
-    IEnumerator MapAddedText()
-    {
-        yield return new WaitForSeconds(1.5f);
-        mapAddedText.SetActive(true);
-        StartCoroutine(HideMapText());
-    }
-
-    IEnumerator HideMapText()
-    {
-        yield return new WaitForSeconds(2);
-        mapAddedText.SetActive(false);
-    }
+   
 
     IEnumerator WaitAndWalkRight()
     {

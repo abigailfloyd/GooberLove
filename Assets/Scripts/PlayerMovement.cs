@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public bool oxmanAnimStarted = false;
 
     [SerializeField] GameManager GM;
+    [SerializeField] DialogueManager dialogueManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,11 +58,22 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    IEnumerator LobbyToOutside()
+    {
+        yield return new WaitForSeconds(1f);
+        GM.lobby.SetActive(false);
+        GM.outsideApt.SetActive(true);
+        GameObject.FindWithTag("Oxman").GetComponent<SpriteRenderer>().enabled = true;
+        gameObject.transform.position = GameObject.FindWithTag("Player start").transform.position;
+        GameObject.FindWithTag("Oxman").transform.position = GameObject.FindWithTag("Oxman start").transform.position;
+        GameObject.FindWithTag("Oxman").GetComponent<Oxman>().WalkDown();
+        WalkDown();
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Front Door")
         {
-            StartCoroutine(GM.FadeToBlack());
             if (!oxmanAnimStarted)
             {
                 if (!doneTouring)
@@ -71,19 +84,14 @@ public class PlayerMovement : MonoBehaviour
                 }
                 else
                 {
+                    StartCoroutine(GM.FadeToBlack());
                     GM.LivingRoomToHallway();
                 }
             }
             else
             {
-                GM.lobby.SetActive(false);
-                GM.outsideApt.SetActive(true);
-                GameObject.FindWithTag("Oxman").GetComponent<SpriteRenderer>().enabled = true;
-                gameObject.transform.position = GameObject.FindWithTag("Player start").transform.position;
-                GameObject.FindWithTag("Oxman").transform.position = GameObject.FindWithTag("Oxman start").transform.position;
-                GameObject.FindWithTag("Oxman").GetComponent<Oxman>().WalkDown();
-                WalkDown();
-
+                StartCoroutine(GM.FadeToBlack());
+                StartCoroutine(LobbyToOutside());
             }
         }
         if (other.tag == "Living room to bathroom")
@@ -158,31 +166,25 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(GM.FadeToBlack());
             GM.StairsToSecondFloor();
         }
-        if (other.tag == "Stairs to first floor")
+        if (other.tag == "Stairs to first floor" && oxmanAnimStarted)
         {
             StartCoroutine(GM.FadeToBlack());
-            playerMovementEnabled = false;
-            animator.SetFloat("Horizontal", 0.0f);
-            animator.SetFloat("Vertical", 0.0f);
-            rb.velocity = new Vector2(0, 0);
-            animator.enabled = false;
-            gameObject.GetComponent<SpriteRenderer>().sprite = defaultSprite;
-            StartCoroutine(StartFollowAnim());
+            StartCoroutine(StartFollowAnimStairs());
         }
         if (other.tag == "DoorTo3C")
         {
             StartCoroutine(GM.FadeToBlack());
-            GoTo3C();
+            StartCoroutine(GoTo3C());
         }
         if (other.tag == "DoorTo3A")
         {
             StartCoroutine(GM.FadeToBlack());
-            GoTo3A();
+            StartCoroutine(GoTo3A());
         }
         if (other.tag == "DoorTo2B")
         {
             StartCoroutine(GM.FadeToBlack());
-            GoTo2B();
+            StartCoroutine(GoTo2B());
         }
         if (other.tag == "Turn up")
         {
@@ -213,52 +215,27 @@ public class PlayerMovement : MonoBehaviour
         if (other.tag == "Elevator door" && oxmanAnimStarted)
         {
             StartCoroutine(GM.FadeToBlack());
-            playerMovementEnabled = false;
-            animator.SetFloat("Horizontal", 0.0f);
-            animator.SetFloat("Vertical", 0.0f);
-            rb.velocity = new Vector2(0, 0);
-            animator.enabled = false;
-            gameObject.GetComponent<SpriteRenderer>().sprite = defaultSprite;
-            StartCoroutine(StartFollowAnim());
+            StartCoroutine(StartFollowAnimElevator());
         }
         if (other.tag == "End of walkway")
         {
             StartCoroutine(GM.FadeToBlack());
-            GM.outsideApt.SetActive(false);
-            GM.townCenter.SetActive(true);
-            GameObject.FindWithTag("Oxman").GetComponent<SpriteRenderer>().enabled = true;
-            gameObject.transform.position = GameObject.FindWithTag("Player start").transform.position;
-            GameObject.FindWithTag("Oxman").transform.position = GameObject.FindWithTag("Oxman start").transform.position;
-            GameObject.FindWithTag("Oxman").GetComponent<Oxman>().WalkDown();
-            WalkDown();
+            StartCoroutine(EndOfWalkway());
         }
         if (other.tag == "Post office")
         {
             StartCoroutine(GM.FadeToBlack());
-            GM.townCenter.SetActive(false);
-            GM.postOffice.SetActive(true);
-            GameObject.FindWithTag("Oxman").GetComponent<SpriteRenderer>().enabled = true;
-            gameObject.transform.position = GameObject.FindWithTag("Player start").transform.position;
-            GameObject.FindWithTag("Oxman").transform.position = GameObject.FindWithTag("Oxman start").transform.position;
-            GameObject.FindWithTag("Oxman").GetComponent<Oxman>().PostOfficeDialogue();
-            playerMovementEnabled = true;
-            animator.SetFloat("Horizontal", 0.0f);
-            animator.SetFloat("Vertical", 0.0f);
-            GameObject.FindWithTag("Oxman").GetComponent<BoxCollider2D>().isTrigger = false;
+            StartCoroutine(IntoPostOffice());
         }
         if (other.tag == "Post office bathroom")
         {
             StartCoroutine(GM.FadeToBlack());
-            GM.postOffice.SetActive(false);
-            GM.postOfficeBathroom.SetActive(true);
-            gameObject.transform.position = GameObject.FindWithTag("Post office bathroom spawn").transform.position;
+            StartCoroutine(IntoPostOfficeBathroom());
         }
         if (other.tag == "Post office main room")
         {
             StartCoroutine(GM.FadeToBlack());
-            GM.postOfficeBathroom.SetActive(false);
-            GM.postOffice.SetActive(true);
-            gameObject.transform.position = GameObject.FindWithTag("Post office main room bathroom spawn").transform.position;
+            StartCoroutine(IntoPostOfficeMainRoom());
         }
         if (other.tag == "Rug")
         {
@@ -274,8 +251,51 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    IEnumerator IntoPostOfficeMainRoom()
+    {
+        yield return new WaitForSeconds(1f);
+        GM.postOfficeBathroom.SetActive(false);
+        GM.postOffice.SetActive(true);
+        gameObject.transform.position = GameObject.FindWithTag("Post office main room bathroom spawn").transform.position;
+    }
 
-        public void WalkUp()
+    IEnumerator IntoPostOfficeBathroom()
+    {
+        yield return new WaitForSeconds(1f);
+        GM.postOffice.SetActive(false);
+        GM.postOfficeBathroom.SetActive(true);
+        gameObject.transform.position = GameObject.FindWithTag("Post office bathroom spawn").transform.position;
+    }
+
+    IEnumerator IntoPostOffice()
+    {
+        yield return new WaitForSeconds(1f);
+        GM.townCenter.SetActive(false);
+        GM.postOffice.SetActive(true);
+        GameObject.FindWithTag("Oxman").GetComponent<SpriteRenderer>().enabled = true;
+        GameObject.FindWithTag("Oxman").GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        gameObject.transform.position = GameObject.FindWithTag("Player start").transform.position;
+        GameObject.FindWithTag("Oxman").transform.position = GameObject.FindWithTag("Oxman start").transform.position;
+        GameObject.FindWithTag("Oxman").GetComponent<Oxman>().PostOfficeDialogue();
+        playerMovementEnabled = true;
+        animator.SetFloat("Horizontal", 0.0f);
+        animator.SetFloat("Vertical", 0.0f);
+        GameObject.FindWithTag("Oxman").GetComponent<BoxCollider2D>().isTrigger = false;
+    }
+
+    IEnumerator EndOfWalkway()
+    {
+        yield return new WaitForSeconds(1f);
+        GM.outsideApt.SetActive(false);
+        GM.townCenter.SetActive(true);
+        GameObject.FindWithTag("Oxman").GetComponent<SpriteRenderer>().enabled = true;
+        gameObject.transform.position = GameObject.FindWithTag("Player start").transform.position;
+        GameObject.FindWithTag("Oxman").transform.position = GameObject.FindWithTag("Oxman start").transform.position;
+        GameObject.FindWithTag("Oxman").GetComponent<Oxman>().WalkDown();
+        WalkDown();
+    }
+
+    public void WalkUp()
     {
         animator.SetFloat("Horizontal", 0);
         animator.SetFloat("Vertical", 1);
@@ -303,14 +323,21 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(-1, 0);
     }
 
-    public IEnumerator StartFollowAnim()
+    public IEnumerator StartFollowAnimElevator()
     {
+        dialogueManager.continueButton.GetComponent<Button>().onClick.RemoveAllListeners();
+        dialogueManager.continueButton.GetComponent<Button>().onClick.AddListener(dialogueManager.DisplayNextSentence);
+        playerMovementEnabled = false;
+        animator.SetFloat("Horizontal", 0.0f);
+        animator.SetFloat("Vertical", 0.0f);
+        rb.velocity = new Vector2(0, 0);
+        animator.enabled = false;
+        gameObject.GetComponent<SpriteRenderer>().sprite = defaultSprite;
         yield return new WaitForSeconds(1);
         GM.elevator.SetActive(false);
         GM.lobby.SetActive(true);
         gameObject.transform.position = GameObject.FindWithTag("Elevator door").transform.position;
         GameObject.FindWithTag("Oxman").transform.position = GameObject.FindWithTag("Oxman start").transform.position;
-        GM.stairs.SetActive(false);
         GM.lobby.GetComponent<Animation>().Play();
         yield return new WaitForSeconds(1f);
         GameObject.FindWithTag("Oxman").GetComponent<Oxman>().WalkRight();
@@ -320,12 +347,32 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(0, -1);
     }
 
-   
-
-
-
-    public void GoTo3A()
+    IEnumerator StartFollowAnimStairs()
     {
+        dialogueManager.continueButton.GetComponent<Button>().onClick.RemoveAllListeners();
+        dialogueManager.continueButton.GetComponent<Button>().onClick.AddListener(delegate { dialogueManager.DisplayNextSentence(); });
+        playerMovementEnabled = false;
+        animator.SetFloat("Horizontal", 0.0f);
+        animator.SetFloat("Vertical", 0.0f);
+        rb.velocity = new Vector2(0, 0);
+        animator.enabled = false;
+        gameObject.GetComponent<SpriteRenderer>().sprite = defaultSprite;
+        yield return new WaitForSeconds(1);
+        GM.stairs.SetActive(false);
+        GM.lobby.SetActive(true);
+        gameObject.transform.position = GameObject.FindWithTag("Stairs/stairs").transform.position;
+        GameObject.FindWithTag("Oxman").transform.position = GameObject.FindWithTag("Oxman Start lower").transform.position;
+        yield return new WaitForSeconds(1f);
+        GameObject.FindWithTag("Oxman").GetComponent<Oxman>().WalkRight();
+        yield return new WaitForSeconds(.5f);
+        animator.enabled = true;
+        animator.SetFloat("Horizontal", 1);
+        rb.velocity = new Vector2(1, 0);
+    }
+
+    public IEnumerator GoTo3A()
+    {
+        yield return new WaitForSeconds(1);
         GM.currentApt = "3A";
         GM.threeC.SetActive(false);
         GM.twoB.SetActive(false);
@@ -342,8 +389,9 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-    public void GoTo2B()
+    public IEnumerator GoTo2B()
     {
+        yield return new WaitForSeconds(1);
         GM.currentApt = "2B";
         GM.threeC.SetActive(false);
         GM.twoB.SetActive(true);
@@ -359,8 +407,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void GoTo3C()
+    public IEnumerator GoTo3C()
     {
+        yield return new WaitForSeconds(1);
         GM.currentApt = "3C";
         GM.threeC.SetActive(true);
         GM.twoB.SetActive(false);

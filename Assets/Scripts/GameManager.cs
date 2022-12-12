@@ -49,6 +49,8 @@ public class GameManager : MonoBehaviour
     public GameObject oxmanPrefab;
 
     public Image blackSquare;
+    public GameObject mapAddedText;
+
 
     // Start is called before the first frame update
     void Start()
@@ -88,6 +90,19 @@ public class GameManager : MonoBehaviour
     public void SecondFloorToStairs()
     {
         StartCoroutine(SecondFloorToStairsCoroutine());
+    }
+
+    public IEnumerator MapAddedText()
+    {
+        yield return new WaitForSeconds(1.5f);
+        mapAddedText.SetActive(true);
+        StartCoroutine(HideMapText());
+    }
+
+    IEnumerator HideMapText()
+    {
+        yield return new WaitForSeconds(2);
+        mapAddedText.SetActive(false);
     }
 
     IEnumerator SecondFloorToStairsCoroutine()
@@ -142,7 +157,7 @@ public class GameManager : MonoBehaviour
         hallway2.SetActive(false);
         elevator.SetActive(true);
         player.transform.position = GameObject.FindWithTag("Elevator/hallway spawn").transform.position;
-        GameObject oxman = Instantiate(oxmanPrefab, new Vector3(0.605037808f, -1.10977125f, 0), Quaternion.identity);
+        GameObject oxman = Instantiate(oxmanPrefab, new Vector3(0.670000017f, -0.379999995f, 0), Quaternion.identity);
         oxman.transform.SetParent(elevator.transform, true);
         oxman.GetComponent<Oxman>().TriggerDialogue();
 
@@ -471,10 +486,10 @@ public class GameManager : MonoBehaviour
             blackSquare.color = c;
             yield return null;
         }
+        screenCanvas.SetActive(false);
+        worldCanvas.SetActive(true);
         if (!player.GetComponent<PlayerMovement>().oxmanAnimStarted)
         {
-            screenCanvas.SetActive(false);
-            worldCanvas.SetActive(true);
             player.GetComponent<PlayerMovement>().playerMovementEnabled = true;
             player.GetComponent<PlayerMovement>().animator.enabled = true;
             player.GetComponent<PlayerMovement>().animator.SetFloat("Horizontal", 0.0f);

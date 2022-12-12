@@ -17,6 +17,10 @@ public class Lease : MonoBehaviour
 
     void Start()
     {
+        GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().playerMovementEnabled = false;
+        GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().animator.SetFloat("Horizontal", 0.0f);
+        GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().animator.SetFloat("Vertical", 0.0f);
+        GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().rb.velocity = new Vector2(0, 0);
         GM = GameObject.FindWithTag("GM").GetComponent<GameManager>();
         if (GM.currentApt == "3C")
         {
@@ -48,6 +52,7 @@ public class Lease : MonoBehaviour
             if (typingName && inputField.text.Length > 0)
             {
                 GM.playerName = inputField.text;
+                GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().playerMovementEnabled = true;
                 gameObject.SetActive(false);
                 playerManager.SignContract();
             }

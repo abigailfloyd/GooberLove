@@ -10,6 +10,7 @@ public class Oxman : NPC
     public Sprite defaultSprite;
     private GameManager GM;
     public Rigidbody2D rb;
+    public DialogueManager DM;
 
 
     void Start()
@@ -19,13 +20,13 @@ public class Oxman : NPC
         rb = GetComponent<Rigidbody2D>();
         animator.enabled = false;
         player = GameObject.FindWithTag("Player");
-
+        DM = GameObject.FindWithTag("Dialogue Manager").GetComponent<DialogueManager>();
     }
 
-    void Update()
+    public override void Update()
     {
         base.Update();
-        if (GameObject.FindWithTag("Dialogue Manager").GetComponent<DialogueManager>().sentences.Count == 0 && !animStarted)
+        if (DM.sentences.Count == 0 && !animStarted)
         {
             animStarted = true;
             animator.enabled = true;
@@ -44,11 +45,8 @@ public class Oxman : NPC
                 animator.SetBool("WalkRight", true);
                 rb.velocity = new Vector2(.75f, 0);
             }
-            
-            
             gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
             rb.constraints = RigidbodyConstraints2D.None;
-            playerMovement.oxmanAnimStarted = true;
         }
     }
 
@@ -59,6 +57,7 @@ public class Oxman : NPC
             animator.SetBool("WalkUp", false);
             gameObject.GetComponent<SpriteRenderer>().sprite = defaultSprite;
             gameObject.transform.SetParent(GM.lobby.transform, true);
+            playerMovement.oxmanAnimStarted = true;
         }
         if (other.tag == "Turn up")
         {
@@ -94,6 +93,8 @@ public class Oxman : NPC
             animator.SetBool("WalkRight", false);
             gameObject.GetComponent<SpriteRenderer>().sprite = defaultSprite;
             gameObject.transform.SetParent(GM.lobby.transform, true);
+            playerMovement.oxmanAnimStarted = true;
+
         }
         if (other.tag == "End of walkway")
         {

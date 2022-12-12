@@ -30,8 +30,10 @@ public class PlayerManager : MonoBehaviour
         playerMovement.doneTouring = true;
         pancho.dialogue.sentences.Clear();
         pancho.dialogue.sentences.Add("Pleasure to have you here! If you need me I'll be downstairs in 2A - just give me a knock knock knock. Bye bye bye.");
+        dialogueManager.ChangeBoxBack();
         dialogueManager.HideOptions();
         pancho.TriggerDialogue();
+        dialogueManager.continueButton.GetComponent<Button>().onClick.RemoveAllListeners();
         if (GM.currentApt == "3C")
         {
             dialogueManager.continueButton.GetComponent<Button>().onClick.AddListener(delegate { TriggerPanchoAnim3C(); });
@@ -49,6 +51,8 @@ public class PlayerManager : MonoBehaviour
 
     public void TriggerPanchoAnim3C()
     {
+        
+
         pancho.animator.enabled = true;
         pancho.animator.SetBool("WalkLeft", true);
         //dialogueManager.continueButton.GetComponent<Button>().onClick.RemoveAllListeners();
@@ -60,6 +64,7 @@ public class PlayerManager : MonoBehaviour
 
     public void TriggerPanchoAnim3A()
     {
+        
         pancho.animator.enabled = true;
         pancho.animator.SetBool("WalkDown", true);
         //dialogueManager.continueButton.GetComponent<Button>().onClick.RemoveAllListeners();
@@ -71,6 +76,7 @@ public class PlayerManager : MonoBehaviour
 
     public void TriggerPanchoAnim2B()
     {
+        
         pancho.animator.enabled = true;
         pancho.animator.SetBool("WalkRight", true);
         //dialogueManager.continueButton.GetComponent<Button>().onClick.RemoveAllListeners();

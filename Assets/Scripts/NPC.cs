@@ -17,7 +17,7 @@ public class NPC : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void Update()
+    public virtual void Update()
     {
         if (player.transform.position.y < (gameObject.transform.position.y-.3))
         {
